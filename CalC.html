@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+        <!-- Bootstrap CSS -->
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <title>TODOs List</title>
+        <script src="./CalC.js" defer>
+        </script>
+      </head>
+      
+      <body>
+        <header class="text-gray-600 body-font" style="color: black;">
+            <div id="nav-container" class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center" style="
+            display: flex;justify-content: center;align-items: center!important; padding: 20px!important;
+        ">
+              <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" style="margin: 0px;">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+                  viewBox="0 0 24 24">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span class="ml-3 text-xl">K-CalC</span>
+              </a>
+              <div id="ham">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <!--   </div>
+              <nav id="sus2" class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <a href="Nutricalculator.html" class="mr-5 hover:text-gray-900">First Link</a>
+                <a href="weather.html" class="mr-5 hover:text-gray-900">Second Link</a>
+                <a href="Nutricalculator.html" class="mr-5 hover:text-gray-900">Third Link</a>
+                <a href="Nutricalculator.html" class="mr-5 hover:text-gray-900">Fourth Link</a>
+                <a href="Nutricalculator.html">
+                  <button
+                    class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Sign
+                    Up
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                  </button>
+                </a>
+              </nav> 
+            </div>  -->
+          </header>
+      
+        <div class="container my-4" style="margin-top: 10px!important;">
+          <h2 class="text-center">Nutri-Calculator</h2>
+      
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" id="title" aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text text-muted">Add an item to the list</small>
+          </div>
+          <button id="add" class="btn btn-primary" onclick="addEntry()">Add to list</button>
+          <button id="clear" class="btn btn-primary" onclick="clearStorage()">Clear list</button>
+          <div style="margin-top: 20px;display: flex;flex-wrap: nowrap;">
+              <span id="intake">Current Intake: 0</span>
+              <span id="cgoal" style="margin-left: 30px;">Calorie Goal: 0 cal</span>
+          </div>
+      
+          <div id="items" class="my-4">
+            <h2>Your Items</h2>
+            <table class="table" id="logs">
+              <thead>
+                <tr>
+                  <th scope="col">SNo</th>
+                  <th scope="col">Food Item</th>
+                  <th scope="col">Calories</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </body>
+</html>

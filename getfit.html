@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <link rel=”stylesheet” href=”css/bootstrap.css”>
+<link rel=”stylesheet” href=”css/bootstrap-responsive.css”>
+  <script src="getfit.js">
+  </script>
+</head>
+<header>
+  <header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+          stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+          viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="ml-3 text-xl">K-Calc</span>
+      </a>
+      <!--<nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+        <a class="mr-5 hover:text-gray-900">First Link</a>
+        <a class="mr-5 hover:text-gray-900">Second Link</a>
+        <a class="mr-5 hover:text-gray-900">Third Link</a>
+        <a class="mr-5 hover:text-gray-900">Fourth Link</a>
+      </nav>-->
+      <!--<button
+        class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 position:fixed focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </button>-->
+    </div>
+  </header>
+</header>
+
+<body class="getfitbody">
+
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
+      <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
+        <h1 class="title-font font-medium text-3xl text-gray-900">Wanna know your unknown details?</h1>
+        <p class="leading-relaxed mt-4">Just Input the details mentioned below and get access to the number of Nutrient
+          values. </p>
+      </div>
+      <div class="getfitimage">
+        <img
+          src="https://cdn.techjockey.com/blog/wp-content/uploads/2019/07/05184002/top-recipe-nutrition-calculator-apps-health-fitness.jpg">
+      </div>
+
+    </div>
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center" id="Hi">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <form class="form" id="myForm" onsubmit="return validateForm()">
+          <label class="label" for="name">Name:</label>
+          <input type="value" id="full-name" placeholder="Enter Name" name="name"><br><br>
+
+          <label class="label" for="age">Age:</label>
+          <input type="number" id="age" placeholder="Enter Age" name="age"><br><br>
+
+          <label class="label" for="gender">Gender:</label>
+          <select id="gender" name="gender">
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select><br><br>
+
+          <label class="label" for="height">Height:</label>
+          <input type="number" id="height" placeholder="in cm" name="height"><br><br>
+
+          <label class="label" for="weight">Weight (in kg):</label>
+
+
+          <input type="number" placeholder="in kg" id="weight" name="weight"><br><br>
+          <label class="label" id="goal" for="goal">Goal:</label>
+          <select id="goat" name="goal">
+            <option value="">Select your goal</option>
+            <option value="Extreme weight gain">Extreme weight gain</option>
+            <option value="Extreme weight loss">Extreme weight loss</option>
+            <option value="Mild weight gain">Mild weight gain</option>
+            <option value="Mild weight loss">Mild weight loss</option>
+            <option value="weight gain">Weight gain</option>
+            <option value="weight loss">Weight loss</option>
+            <option value="maintain weight">maintain weight</option>
+          </select><br><br>
+          <button type="button" class="submit" onclick="getD()">Submit</button>
+        </form><br><br>
+
+        <p id="abc"></p>
+        <p id="xyzs"></p>
+        <script>
+          function validateForm() {
+            var name = document.forms["myForm"]["name"].value;
+            var age = document.forms["myForm"]["age"].value;
+            var gender = document.forms["myForm"]["gender"].value;
+            var height = document.forms["myForm"]["height"].value;
+            var weight = document.forms["myForm"]["weight"].value;
+
+            if (name == "") {
+              alert("Name must be filled out");
+              return false;
+            }
+
+            if (age == "" || age < 1 || age > 150) {
+              alert("Please enter a valid age between 1 and 150");
+              return false;
+            }
+
+            if (gender == "") {
+              alert("Please select your gender");
+              return false;
+            }
+
+            if (height == "" || height < 1 || height > 300) {
+              alert("Please enter a valid height between 1 and 300 cm");
+              return false;
+            }
+
+            if (weight == "" || weight < 1 || weight > 500) {
+              alert("Please enter a valid weight between 1 and 500 kg");
+              return false;
+            }
+
+            return true;
+          }
+        </script>
+      </a>
+    </div>
+  </section>
+</body>
+
+</html>
